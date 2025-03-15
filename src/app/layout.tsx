@@ -1,15 +1,10 @@
-import './globals.css'
-
 import type { Metadata } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
+import { Mulish } from 'next/font/google'
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin'],
-})
+import styles from './layout.module.scss'
 
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
+const mulish = Mulish({
+  variable: '--font-mulish',
   subsets: ['latin'],
 })
 
@@ -25,9 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
-      </body>
+      <body className={`${styles.body} ${mulish.variable}`}>{children}</body>
     </html>
   )
 }

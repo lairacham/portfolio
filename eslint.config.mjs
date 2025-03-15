@@ -20,6 +20,9 @@ const eslintConfig = [
       semi: ['error', 'never'],
       'simple-import-sort/imports': 'error',
       'simple-import-sort/exports': 'error',
+      'no-trailing-spaces': 'error',
+      'eol-last': ['error', 'always'],
+      'comma-dangle': ['error', 'always-multiline'],
     },
   }),
 ]
