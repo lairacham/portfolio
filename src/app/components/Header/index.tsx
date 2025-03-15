@@ -17,29 +17,25 @@ const Header = () => {
     setIsMenuOpen(!isMenuOpen)
   }
 
+  if (isMobile && isMenuOpen) {
+    return (
+      <div className={styles.mobileHeaderItems}>
+        <X className={styles.closeIcon} onClick={handleMenuClick} />
+        <Link href='/about'>About</Link>
+        <Link href='/works'>Works</Link>
+        <Link href='/contact-me'>Contact Me</Link>
+      </div>
+    )
+  }
+
   return (
     <div className={styles.headerContainer}>
       <Link href='/'>Home</Link>
       {isMobile ? (
-        <>
-          <Menu
-            className={isMenuOpen ? styles.displayNone : styles.icon}
-            onClick={handleMenuClick}
-          />
-          <div
-            className={
-              isMenuOpen ? styles.mobileHeaderItems : styles.displayNone
-            }
-          >
-            <Link href='/about'>About</Link>
-            <Link href='/works'>Works</Link>
-            <Link href='/contact-me'>Contact Me</Link>
-          </div>
-          <X
-            className={isMenuOpen ? styles.icon : styles.displayNone}
-            onClick={handleMenuClick}
-          />
-        </>
+        <Menu
+          className={isMenuOpen ? styles.displayNone : styles.icon}
+          onClick={handleMenuClick}
+        />
       ) : (
         <div className={styles.headerItems}>
           <Link href='/about'>About</Link>
