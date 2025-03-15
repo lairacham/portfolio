@@ -1,3 +1,37 @@
 .headerContainer {
     width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .displayNone {
+        display: none;
+    }
+
+    .icon {
+        display: block;
+        grid-area: 1 / 2 / 2 / 3;
+        justify-self: end;
+
+        @media screen and (min-width: 768px) {
+            display: none;
+        }
+    }
+    .mobileHeaderItems {
+        grid-area: 2 / 2 / 3 / 3;
+        justify-self: end;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .headerItems {
+        display: flex;
+    }
 }
