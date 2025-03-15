@@ -33,7 +33,7 @@ const Header = () => {
           >
             <Link href='/about'>About</Link>
             <Link href='/works'>Works</Link>
-            <Link href='/contact-us'>Contact Us</Link>
+            <Link href='/contact-me'>Contact Me</Link>
           </div>
           <X
             className={isMenuOpen ? styles.icon : styles.displayNone}
@@ -44,7 +44,7 @@ const Header = () => {
         <div className={styles.headerItems}>
           <Link href='/about'>About</Link>
           <Link href='/works'>Works</Link>
-          <Link href='/contact-us'>Contact Us</Link>
+          <Link href='/contact-me'>Contact Me</Link>
         </div>
       )}
     </div>
