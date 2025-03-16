@@ -1,0 +1,16 @@
+@import '../../styles/variables.module.scss';
+
+.dark {
+    background: $primary-color;
+    * {
+        color: white;
+    }
+}
+
+.light {
+    background: $light-theme-primary-color;
+
+    * {
+        color: black;
+    }
+}

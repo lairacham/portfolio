@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Mulish } from 'next/font/google'
 
+import ThemeProvider from './contexts/useTheme'
 import styles from './layout.module.scss'
 
 const mulish = Mulish({
@@ -20,7 +21,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={`${styles.body} ${mulish.variable}`}>{children}</body>
+      <ThemeProvider>
+        <body className={`${styles.body} ${mulish.variable}`}>{children}</body>
+      </ThemeProvider>
     </html>
   )
 }
