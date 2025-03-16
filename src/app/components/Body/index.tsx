@@ -16,11 +16,11 @@ const Body = ({ children, className }: IProps) => {
   const { theme } = themeContext ?? {}
 
   return (
-    <div
+    <body
       className={`${theme === 'dark' ? styles.dark : styles.light} ${className}`}
     >
       {children}
-    </div>
+    </body>
   )
 }
 

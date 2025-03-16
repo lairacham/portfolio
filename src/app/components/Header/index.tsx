@@ -36,6 +36,11 @@ const Header = () => {
         <Link href='#about'>About</Link>
         <Link href='#works'>Works</Link>
         <Link href='#contact-me'>Contact Me</Link>
+        {theme === 'dark' ? (
+          <Sun onClick={handleToggleTheme} size='3rem' />
+        ) : (
+          <Moon onClick={handleToggleTheme} size='3rem' />
+        )}
       </header>
     )
   }

@@ -8,6 +8,8 @@
 
     .headerItems {
         display: flex;
+        gap: 1rem;
+        cursor: pointer;
     }
 
     .displayNone {
@@ -32,11 +34,14 @@
     height: 100vh;
     width: 100vw;
     display: flex;
+    gap: 2rem;
     flex-direction: column;
     align-items: flex-end;
 
-    a {
+    a, svg {
         margin-right: 1rem;
+        cursor: pointer;
+        font-size: 3rem;
     }
 
     .closeIcon {
